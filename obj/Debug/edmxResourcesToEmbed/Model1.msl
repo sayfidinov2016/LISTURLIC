@@ -1,0 +1,165 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Хранилище RegistryModelContainer" CdmEntityContainer="RegistryEntities">
+    <EntitySetMapping Name="Address">
+      <EntityTypeMapping TypeName="RegistryModel.Address">
+        <MappingFragment StoreEntitySet="Address">
+          <ScalarProperty Name="ID_address" ColumnName="ID_address" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="GRN" ColumnName="GRN" />
+          <ScalarProperty Name="Date_USRLE" ColumnName="Date_USRLE" />
+          <ScalarProperty Name="Address1" ColumnName="Address" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Capital">
+      <EntityTypeMapping TypeName="RegistryModel.Capital">
+        <MappingFragment StoreEntitySet="Capital">
+          <ScalarProperty Name="ID_capital" ColumnName="ID_capital" />
+          <ScalarProperty Name="View" ColumnName="View" />
+          <ScalarProperty Name="Size__in_rub_" ColumnName="Size (in rub)" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Inactive_organizations">
+      <EntityTypeMapping TypeName="RegistryModel.Inactive_organizations">
+        <MappingFragment StoreEntitySet="Inactive_organizations">
+          <ScalarProperty Name="ID_inactive" ColumnName="ID_inactive" />
+          <ScalarProperty Name="Organizations" ColumnName="Organizations" />
+          <ScalarProperty Name="Reason" ColumnName="Reason" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Legal_entity">
+      <EntityTypeMapping TypeName="RegistryModel.Legal_entity">
+        <MappingFragment StoreEntitySet="Legal_entity">
+          <ScalarProperty Name="ID_legal_entity" ColumnName="ID_legal_entity" />
+          <ScalarProperty Name="Lastname" ColumnName="Lastname" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Patronymic" ColumnName="Patronymic" />
+          <ScalarProperty Name="INN" ColumnName="INN" />
+          <ScalarProperty Name="Post" ColumnName="Post" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Organizations">
+      <EntityTypeMapping TypeName="RegistryModel.Organizations">
+        <MappingFragment StoreEntitySet="Organizations">
+          <ScalarProperty Name="ID_organizations" ColumnName="ID_organizations" />
+          <ScalarProperty Name="Full_name" ColumnName="Full_name" />
+          <ScalarProperty Name="Abbreviated_name" ColumnName="Abbreviated_name" />
+          <ScalarProperty Name="GRN" ColumnName="GRN" />
+          <ScalarProperty Name="Date_USRLE" ColumnName="Date_USRLE" />
+          <ScalarProperty Name="Type_organizations" ColumnName="Type_organizations" />
+          <ScalarProperty Name="Registration_authority" ColumnName="Registration_authority" />
+          <ScalarProperty Name="Status_organizations" ColumnName="Status_organizations" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Post">
+      <EntityTypeMapping TypeName="RegistryModel.Post">
+        <MappingFragment StoreEntitySet="Post">
+          <ScalarProperty Name="ID_post" ColumnName="ID_post" />
+          <ScalarProperty Name="Post1" ColumnName="Post" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Registration_authority">
+      <EntityTypeMapping TypeName="RegistryModel.Registration_authority">
+        <MappingFragment StoreEntitySet="Registration_authority">
+          <ScalarProperty Name="ID_authority" ColumnName="ID_authority" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Registration_information">
+      <EntityTypeMapping TypeName="RegistryModel.Registration_information">
+        <MappingFragment StoreEntitySet="Registration_information">
+          <ScalarProperty Name="ID_registrations" ColumnName="ID_registrations" />
+          <ScalarProperty Name="Мethod_education" ColumnName="Мethod_education" />
+          <ScalarProperty Name="OGRN" ColumnName="OGRN" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Status_organizations">
+      <EntityTypeMapping TypeName="RegistryModel.Status_organizations">
+        <MappingFragment StoreEntitySet="Status_organizations">
+          <ScalarProperty Name="ID_information" ColumnName="ID_information" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="RegistryModel.sysdiagrams">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Type_organization_">
+      <EntityTypeMapping TypeName="RegistryModel.Type_organization_">
+        <MappingFragment StoreEntitySet="Type_organization ">
+          <ScalarProperty Name="ID_type" ColumnName="ID_type" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Users">
+      <EntityTypeMapping TypeName="RegistryModel.Users">
+        <MappingFragment StoreEntitySet="Users">
+          <ScalarProperty Name="ID_users" ColumnName="ID_users" />
+          <ScalarProperty Name="Lastname" ColumnName="Lastname" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Patronymic" ColumnName="Patronymic" />
+          <ScalarProperty Name="Post" ColumnName="Post" />
+          <ScalarProperty Name="Login" ColumnName="Login" />
+          <ScalarProperty Name="Pasword" ColumnName="Pasword" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Тax_accounting">
+      <EntityTypeMapping TypeName="RegistryModel.Тax_accounting">
+        <MappingFragment StoreEntitySet="Тax_accounting">
+          <ScalarProperty Name="ID_accounting" ColumnName="ID_accounting" />
+          <ScalarProperty Name="INN" ColumnName="INN" />
+          <ScalarProperty Name="KPP" ColumnName="KPP" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="Name_authority" ColumnName="Name_authority" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="sp_alterdiagram" FunctionName="Хранилище RegistryModel.sp_alterdiagram" />
+    <FunctionImportMapping FunctionImportName="sp_creatediagram" FunctionName="Хранилище RegistryModel.sp_creatediagram" />
+    <FunctionImportMapping FunctionImportName="sp_dropdiagram" FunctionName="Хранилище RegistryModel.sp_dropdiagram" />
+    <FunctionImportMapping FunctionImportName="sp_helpdiagramdefinition" FunctionName="Хранилище RegistryModel.sp_helpdiagramdefinition">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="RegistryModel.sp_helpdiagramdefinition_Result">
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_helpdiagrams" FunctionName="Хранилище RegistryModel.sp_helpdiagrams">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="RegistryModel.sp_helpdiagrams_Result">
+          <ScalarProperty Name="Database" ColumnName="Database" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Owner" ColumnName="Owner" />
+          <ScalarProperty Name="OwnerID" ColumnName="OwnerID" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_renamediagram" FunctionName="Хранилище RegistryModel.sp_renamediagram" />
+    <FunctionImportMapping FunctionImportName="sp_upgraddiagrams" FunctionName="Хранилище RegistryModel.sp_upgraddiagrams" />
+  </EntityContainerMapping>
+</Mapping>

@@ -1,0 +1,72 @@
+﻿<Page x:Class="LISTURLIC.Avt.List.ListOrgnPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:LISTURLIC.Avt.List"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="ListPage" Width="673" Height="373" Background="#FFF1E7E7">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition Height="6*"/>
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <TextBlock Text="Список Организаций"
+                   Width="300"
+                   Height="30"
+                   FontSize="20"/>
+
+        <StackPanel Grid.Row="1">
+            <WrapPanel>
+                <TextBlock Text="Поиск"
+                           Margin="5 0 5 0"/>
+                <TextBox x:Name="PoiskTxt"
+                         Width="600" TextChanged="PoiskTxt_TextChanged"/>
+            </WrapPanel>
+            <DataGrid Margin="0 5 0 0"
+                      Height="250"
+                      x:Name="ListOrgn"
+                      AutoGenerateColumns="False">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="Название"
+                                    Binding="{Binding Abbreviated_name}"
+                                    Width="*"/>
+                    <DataGridTextColumn Header="Адресс"
+                                    Binding="{Binding Registration_information.Address}"
+                                    Width="*"/>
+                    <DataGridTextColumn Header="ОГРН"
+                                    Binding="{Binding Registration_information.OGRN}"
+                                    Width="*"/>
+                    <DataGridTextColumn Header="ИНН"
+                                    Binding="{Binding Тax_accounting.INN}"
+                                    Width="*"/>
+                    <DataGridTextColumn Header="КПП"
+                                    Binding="{Binding Тax_accounting.KPP}"
+                                    Width="*"/>
+                    <DataGridTextColumn Header="Юридическое лицо"
+                                    Binding="{Binding Legal_entity.Allname}"
+                                    Width="*"/>
+                </DataGrid.Columns>
+            </DataGrid>
+        </StackPanel>
+
+        <WrapPanel Grid.Row="2"
+                   HorizontalAlignment="Center"
+                   VerticalAlignment="Center">
+            <Button x:Name="EndBtn"
+                    Content="Отмена"
+                    Margin="0 0 50 0" Click="EndBtn_Click"/>
+            <Button Margin="0 0 50 0"
+                    Name="ChangBtn"
+                    Content="Изменить" Click="ChangBtn_Click"/>
+            <Button Margin="0 0 50 0"
+                    Name="LikvBtn" Width="120"
+                    Content="Ликвидировать" Click="LikvBtn_Click"/>
+            <Button x:Name="VodBtn"
+                    Content="Выбрать" Click="VodBtn_Click"/>
+        </WrapPanel>
+    </Grid>
+</Page>

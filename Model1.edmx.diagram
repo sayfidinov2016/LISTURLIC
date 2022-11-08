@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="d7d9167c57fe46ba855e255dc66768fa" Name="Diagram1">
+        <EntityTypeShape EntityType="RegistryModel.Address" Width="1.5" PointX="5.25" PointY="1.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="RegistryModel.Capital" Width="1.5" PointX="5.25" PointY="4.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="RegistryModel.Inactive_organizations" Width="1.5" PointX="5.25" PointY="7.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="RegistryModel.Legal_entity" Width="1.5" PointX="5.25" PointY="9.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="RegistryModel.Organizations" Width="1.5" PointX="3" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="RegistryModel.Post" Width="1.5" PointX="7.75" PointY="1.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="RegistryModel.Registration_authority" Width="1.5" PointX="0.75" PointY="9" IsExpanded="true" />
+        <EntityTypeShape EntityType="RegistryModel.Registration_information" Width="1.5" PointX="5.25" PointY="13" IsExpanded="true" />
+        <EntityTypeShape EntityType="RegistryModel.Status_organizations" Width="1.5" PointX="0.75" PointY="6" IsExpanded="true" />
+        <EntityTypeShape EntityType="RegistryModel.sysdiagrams" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="RegistryModel.Type_organization_" Width="1.5" PointX="0.75" PointY="12.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="RegistryModel.Users" Width="1.5" PointX="10" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="RegistryModel.Тax_accounting" Width="1.5" PointX="5.25" PointY="16.125" IsExpanded="true" />
+        <AssociationConnector Association="RegistryModel.FK_Address_Organizations" ManuallyRouted="false" />
+        <AssociationConnector Association="RegistryModel.FK_Capital_Organizations" ManuallyRouted="false" />
+        <AssociationConnector Association="RegistryModel.FK_Inactive_organizations_Organizations" ManuallyRouted="false" />
+        <AssociationConnector Association="RegistryModel.FK_Legal_entity_Organizations" ManuallyRouted="false" />
+        <AssociationConnector Association="RegistryModel.FK_Organizations_Registration_authority" ManuallyRouted="false" />
+        <AssociationConnector Association="RegistryModel.FK_Organizations_Status_organizations" ManuallyRouted="false" />
+        <AssociationConnector Association="RegistryModel.FK_Organizations_Type_organization_" ManuallyRouted="false" />
+        <AssociationConnector Association="RegistryModel.FK_Registration_information_Organizations" ManuallyRouted="false" />
+        <AssociationConnector Association="RegistryModel.FK_Тax_accounting_Organizations" ManuallyRouted="false" />
+        <AssociationConnector Association="RegistryModel.FK_Users_Post" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

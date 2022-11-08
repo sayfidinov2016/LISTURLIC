@@ -1,0 +1,332 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Хранилище RegistryModel" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Address">
+    <Key>
+      <PropertyRef Name="ID_address" />
+    </Key>
+    <Property Name="ID_address" Type="int" Nullable="false" />
+    <Property Name="City" Type="nvarchar" MaxLength="30" Nullable="false" />
+    <Property Name="GRN" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="Date_USRLE" Type="date" Nullable="false" />
+    <Property Name="Address" Type="nvarchar" MaxLength="100" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Capital">
+    <Key>
+      <PropertyRef Name="ID_capital" />
+    </Key>
+    <Property Name="ID_capital" Type="int" Nullable="false" />
+    <Property Name="View" Type="nvarchar" MaxLength="30" Nullable="false" />
+    <Property Name="Size (in rub)" Type="decimal" Precision="10" Scale="2" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Inactive_organizations">
+    <Key>
+      <PropertyRef Name="ID_inactive" />
+    </Key>
+    <Property Name="ID_inactive" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Organizations" Type="int" Nullable="false" />
+    <Property Name="Reason" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="Date" Type="date" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Legal_entity">
+    <Key>
+      <PropertyRef Name="ID_legal_entity" />
+    </Key>
+    <Property Name="ID_legal_entity" Type="int" Nullable="false" />
+    <Property Name="Lastname" Type="nvarchar" MaxLength="30" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="30" Nullable="false" />
+    <Property Name="Patronymic" Type="nvarchar" MaxLength="30" />
+    <Property Name="INN" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="Post" Type="nvarchar" MaxLength="30" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Organizations">
+    <Key>
+      <PropertyRef Name="ID_organizations" />
+    </Key>
+    <Property Name="ID_organizations" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Full_name" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="Abbreviated_name" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="GRN" Type="nvarchar" MaxLength="15" Nullable="false" />
+    <Property Name="Date_USRLE" Type="date" Nullable="false" />
+    <Property Name="Type_organizations" Type="int" Nullable="false" />
+    <Property Name="Registration_authority" Type="int" Nullable="false" />
+    <Property Name="Status_organizations" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Post">
+    <Key>
+      <PropertyRef Name="ID_post" />
+    </Key>
+    <Property Name="ID_post" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Post" Type="nvarchar" MaxLength="30" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Registration_authority">
+    <Key>
+      <PropertyRef Name="ID_authority" />
+    </Key>
+    <Property Name="ID_authority" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="Address" Type="nvarchar" MaxLength="100" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Registration_information">
+    <Key>
+      <PropertyRef Name="ID_registrations" />
+    </Key>
+    <Property Name="ID_registrations" Type="int" Nullable="false" />
+    <Property Name="Мethod_education" Type="nvarchar" MaxLength="30" Nullable="false" />
+    <Property Name="OGRN" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="Date" Type="date" Nullable="false" />
+    <Property Name="City" Type="nvarchar" MaxLength="30" Nullable="false" />
+    <Property Name="Address" Type="nvarchar" MaxLength="100" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Status_organizations">
+    <Key>
+      <PropertyRef Name="ID_information" />
+    </Key>
+    <Property Name="ID_information" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Status" Type="nvarchar" MaxLength="30" Nullable="false" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+  <EntityType Name="Type_organization ">
+    <Key>
+      <PropertyRef Name="ID_type" />
+    </Key>
+    <Property Name="ID_type" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Type" Type="nvarchar" MaxLength="3" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Users">
+    <Key>
+      <PropertyRef Name="ID_users" />
+    </Key>
+    <Property Name="ID_users" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Lastname" Type="nvarchar" MaxLength="30" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="30" Nullable="false" />
+    <Property Name="Patronymic" Type="nvarchar" MaxLength="30" Nullable="false" />
+    <Property Name="Post" Type="int" Nullable="false" />
+    <Property Name="Login" Type="nvarchar" MaxLength="30" Nullable="false" />
+    <Property Name="Pasword" Type="nvarchar" MaxLength="30" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Тax_accounting">
+    <Key>
+      <PropertyRef Name="ID_accounting" />
+    </Key>
+    <Property Name="ID_accounting" Type="int" Nullable="false" />
+    <Property Name="INN" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="KPP" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Date" Type="date" Nullable="false" />
+    <Property Name="Name_authority" Type="nvarchar" MaxLength="100" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_Address_Organizations">
+    <End Role="Organizations" Type="Self.Organizations" Multiplicity="1" />
+    <End Role="Address" Type="Self.Address" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Organizations">
+        <PropertyRef Name="ID_organizations" />
+      </Principal>
+      <Dependent Role="Address">
+        <PropertyRef Name="ID_address" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Capital_Organizations">
+    <End Role="Organizations" Type="Self.Organizations" Multiplicity="1" />
+    <End Role="Capital" Type="Self.Capital" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Organizations">
+        <PropertyRef Name="ID_organizations" />
+      </Principal>
+      <Dependent Role="Capital">
+        <PropertyRef Name="ID_capital" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Inactive_organizations_Organizations">
+    <End Role="Organizations" Type="Self.Organizations" Multiplicity="1" />
+    <End Role="Inactive_organizations" Type="Self.Inactive_organizations" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Organizations">
+        <PropertyRef Name="ID_organizations" />
+      </Principal>
+      <Dependent Role="Inactive_organizations">
+        <PropertyRef Name="Organizations" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Legal_entity_Organizations">
+    <End Role="Organizations" Type="Self.Organizations" Multiplicity="1" />
+    <End Role="Legal_entity" Type="Self.Legal_entity" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Organizations">
+        <PropertyRef Name="ID_organizations" />
+      </Principal>
+      <Dependent Role="Legal_entity">
+        <PropertyRef Name="ID_legal_entity" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Organizations_Registration_authority">
+    <End Role="Registration_authority" Type="Self.Registration_authority" Multiplicity="1" />
+    <End Role="Organizations" Type="Self.Organizations" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Registration_authority">
+        <PropertyRef Name="ID_authority" />
+      </Principal>
+      <Dependent Role="Organizations">
+        <PropertyRef Name="Registration_authority" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Organizations_Status_organizations">
+    <End Role="Status_organizations" Type="Self.Status_organizations" Multiplicity="1" />
+    <End Role="Organizations" Type="Self.Organizations" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Status_organizations">
+        <PropertyRef Name="ID_information" />
+      </Principal>
+      <Dependent Role="Organizations">
+        <PropertyRef Name="Status_organizations" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Organizations_Type_organization ">
+    <End Role="Type_organization " Type="Self.Type_organization " Multiplicity="1" />
+    <End Role="Organizations" Type="Self.Organizations" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Type_organization ">
+        <PropertyRef Name="ID_type" />
+      </Principal>
+      <Dependent Role="Organizations">
+        <PropertyRef Name="Type_organizations" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Registration_information_Organizations">
+    <End Role="Organizations" Type="Self.Organizations" Multiplicity="1" />
+    <End Role="Registration_information" Type="Self.Registration_information" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Organizations">
+        <PropertyRef Name="ID_organizations" />
+      </Principal>
+      <Dependent Role="Registration_information">
+        <PropertyRef Name="ID_registrations" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Users_Post">
+    <End Role="Post" Type="Self.Post" Multiplicity="1" />
+    <End Role="Users" Type="Self.Users" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Post">
+        <PropertyRef Name="ID_post" />
+      </Principal>
+      <Dependent Role="Users">
+        <PropertyRef Name="Post" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Тax_accounting_Organizations">
+    <End Role="Organizations" Type="Self.Organizations" Multiplicity="1" />
+    <End Role="Тax_accounting" Type="Self.Тax_accounting" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Organizations">
+        <PropertyRef Name="ID_organizations" />
+      </Principal>
+      <Dependent Role="Тax_accounting">
+        <PropertyRef Name="ID_accounting" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Function Name="fn_diagramobjects" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="int" />
+  <Function Name="sp_alterdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+    <Parameter Name="version" Type="int" Mode="In" />
+    <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
+  </Function>
+  <Function Name="sp_creatediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+    <Parameter Name="version" Type="int" Mode="In" />
+    <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
+  </Function>
+  <Function Name="sp_dropdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_helpdiagramdefinition" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_helpdiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_renamediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+    <Parameter Name="new_diagramname" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="sp_upgraddiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <EntityContainer Name="Хранилище RegistryModelContainer">
+    <EntitySet Name="Address" EntityType="Self.Address" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Capital" EntityType="Self.Capital" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Inactive_organizations" EntityType="Self.Inactive_organizations" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Legal_entity" EntityType="Self.Legal_entity" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Organizations" EntityType="Self.Organizations" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Post" EntityType="Self.Post" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Registration_authority" EntityType="Self.Registration_authority" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Registration_information" EntityType="Self.Registration_information" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Status_organizations" EntityType="Self.Status_organizations" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Type_organization " EntityType="Self.Type_organization " Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Users" EntityType="Self.Users" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Тax_accounting" EntityType="Self.Тax_accounting" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_Address_Organizations" Association="Self.FK_Address_Organizations">
+      <End Role="Organizations" EntitySet="Organizations" />
+      <End Role="Address" EntitySet="Address" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Capital_Organizations" Association="Self.FK_Capital_Organizations">
+      <End Role="Organizations" EntitySet="Organizations" />
+      <End Role="Capital" EntitySet="Capital" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Inactive_organizations_Organizations" Association="Self.FK_Inactive_organizations_Organizations">
+      <End Role="Organizations" EntitySet="Organizations" />
+      <End Role="Inactive_organizations" EntitySet="Inactive_organizations" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Legal_entity_Organizations" Association="Self.FK_Legal_entity_Organizations">
+      <End Role="Organizations" EntitySet="Organizations" />
+      <End Role="Legal_entity" EntitySet="Legal_entity" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Organizations_Registration_authority" Association="Self.FK_Organizations_Registration_authority">
+      <End Role="Registration_authority" EntitySet="Registration_authority" />
+      <End Role="Organizations" EntitySet="Organizations" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Organizations_Status_organizations" Association="Self.FK_Organizations_Status_organizations">
+      <End Role="Status_organizations" EntitySet="Status_organizations" />
+      <End Role="Organizations" EntitySet="Organizations" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Organizations_Type_organization " Association="Self.FK_Organizations_Type_organization ">
+      <End Role="Type_organization " EntitySet="Type_organization " />
+      <End Role="Organizations" EntitySet="Organizations" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Registration_information_Organizations" Association="Self.FK_Registration_information_Organizations">
+      <End Role="Organizations" EntitySet="Organizations" />
+      <End Role="Registration_information" EntitySet="Registration_information" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Users_Post" Association="Self.FK_Users_Post">
+      <End Role="Post" EntitySet="Post" />
+      <End Role="Users" EntitySet="Users" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Тax_accounting_Organizations" Association="Self.FK_Тax_accounting_Organizations">
+      <End Role="Organizations" EntitySet="Organizations" />
+      <End Role="Тax_accounting" EntitySet="Тax_accounting" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
